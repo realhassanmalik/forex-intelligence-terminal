@@ -1,0 +1,50 @@
+========================================================================
+  FOREX INTELLIGENCE TERMINAL  —  how to run it on any computer
+========================================================================
+
+You need TWO free programs installed first (one-time, per computer):
+
+  1. Python 3.10 or newer   ->  https://www.python.org/downloads/
+       * On Windows, tick "Add python.exe to PATH" during install.
+  2. Node.js 20 or newer    ->  https://nodejs.org  (pick the "LTS" one)
+
+That's it. Everything else installs itself the first time you launch.
+
+------------------------------------------------------------------------
+  TO START IT
+------------------------------------------------------------------------
+
+  Windows :  double-click   start.bat
+  Mac     :  double-click   start.command
+  Linux   :  run            ./start.sh        (in a terminal)
+
+The FIRST launch on a new computer takes a few minutes — it downloads
+the packages it needs. After that it starts in about 10 seconds.
+
+When it's ready, your browser opens automatically to:
+
+      http://localhost:3000
+
+------------------------------------------------------------------------
+  TO STOP IT
+------------------------------------------------------------------------
+
+  Windows :  close the two black server windows
+  Mac     :  close the Terminal window, or run  stop.command
+  Linux   :  press Ctrl+C in the terminal
+
+------------------------------------------------------------------------
+  NOTES
+------------------------------------------------------------------------
+
+* No database setup needed — it uses a local SQLite file created
+  automatically inside the "backend" folder.
+* All data (prices, news, calendar) is demo/synthetic. The AI features
+  run in "mock" mode until you add an API key.
+* To turn on real AI: create a file "backend/.env" containing:
+      AI_PROVIDER=claude
+      ANTHROPIC_API_KEY=your_key_here
+* If a first launch fails, it's almost always because Python or Node
+  isn't installed or wasn't added to PATH — install them and retry.
+
+========================================================================
